@@ -3,26 +3,32 @@ export class Pen {
     model: string;
     color: string;
     penTip: number;
-    charge: number;
+    ink: number;
     capped: boolean;
 
     public status(): void {
-        process.stdout.write(`Is a ${this.color} pen`);
-        process.stdout.write(` capped? ${this.capped}`);
+        console.log(`Model: ${this.model}`);
+        console.log(`Color: ${this.color}`);
+        console.log(`Tip: ${this.penTip}`);
+        console.log(`Ink: ${this.ink}`);
+        console.log(`Is the pen capped? ${this.capped}`);
     }
 
     public scribble(): void {
-
+        if (this.capped) {
+            console.log(`-> It's impossible to scribble! The pen is capped!`);
+        } else {
+            console.log(`-> I'm scribbling...`);
+        }
     }
 
     public cap(): void {
-        
+        this.capped = true;
     }
 
     public uncap(): void {
-
+        this.capped = false;
     }
-
 }
 
 /* Warnings!
