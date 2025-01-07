@@ -1,3 +1,5 @@
+// Improved Version
+
 export class PenV2 {
 
     public model: string;
