@@ -2,7 +2,7 @@ export class Pen {
 
     public model: string;
     public color: string;
-    private _penTip: number;
+    private _penTip: number; // The underscore prefix (_) is often used as a convention to indicate that the attribute is private.
     protected ink: number;
     private capped: boolean;
 
